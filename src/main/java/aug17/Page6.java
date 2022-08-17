@@ -77,6 +77,8 @@ public class Page6 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		Seet seet1 = new Seet(10, 11);
 		Seet seet2 = new Seet(3.14);
+		Dool dool1 = new Dool(1,5);
+		Dool dool2 = new Dool(5.5);
 		Two tw1 = new Two(5);
 		Two tw2 = new Two("±è±æµ¿");
 		IamSon s1 = new IamSon();
