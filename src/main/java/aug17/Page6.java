@@ -11,11 +11,12 @@ class IamKing {
 	String name;
 	IamKing(String name){
 		this.name = name;
+		System.out.println(name);
 	}
 }
 class IamSon extends IamKing {
 	IamSon(){
-		super("È«±æµ¿");// ----> IamKing("È«±æµ¿");
+		super("È«±æµ¿111");// ----> IamKing("È«±æµ¿");
 	}
 }
 class One {
@@ -85,6 +86,7 @@ public class Page6 extends HttpServlet {
 		IamKing k1 = new IamKing("¾È³ç");
 		IamKing k2 = new IamKing("korea");
 		IamKing k3 = new IamKing("È«±æµ¿");
+		System.out.println(k1.name);
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
