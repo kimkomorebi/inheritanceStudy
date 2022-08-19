@@ -16,15 +16,18 @@ import javax.servlet.http.HttpServletResponse;
 //스즈키의 용돈 잔액을 출력합니다.
 
 class Suzuki {
-	void buy(TV a) {//TV를 구매하는 메소드
+	void buy(Item a) {
 		pocketMoney = pocketMoney - a.price;
 	}
-	void buy(Computer b) {
-		pocketMoney = pocketMoney - b.price;
-	}//컴퓨터를 구매하는 메소드
-	void buy(Ref c) {
-		pocketMoney = pocketMoney - c.price;
-	}//냉장고를 구매하는 메소드
+//	void buy(TV a) {//TV를 구매하는 메소드
+//		pocketMoney = pocketMoney - a.price;
+//	}
+//	void buy(Computer b) {
+//		pocketMoney = pocketMoney - b.price;
+//	}//컴퓨터를 구매하는 메소드
+//	void buy(Ref c) {
+//		pocketMoney = pocketMoney - c.price;
+//	}//냉장고를 구매하는 메소드
 	
 	int pocketMoney = 1000000;
 	Suzuki(){}
@@ -61,6 +64,13 @@ public class Aug18Study2 extends HttpServlet {
 		su.buy(tv);//TV를 구매함
 		su.buy(com);//컴퓨터를 구매함
 		su.buy(rf);//냉장고를 구매함
+//		위의 su.buy();  tv,com,rf 변수 안에 각 클래스가 담겨있고 
+//		buy 메서드의 매개변수 데이터타입으로 item을 작성하여
+//		price 변수에 접근
+//		Item a = new TV();
+//		a = new Computer();
+//		a = new Ref();
+		
 		System.out.println("TV의 가격:"+tv.price);
 		System.out.println("컴퓨터의 가격:"+com.price);
 		System.out.println("냉장고의 가격:"+rf.price);
