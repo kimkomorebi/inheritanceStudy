@@ -22,17 +22,17 @@ class JavaDepartmentstore {
 
 class Bag extends JavaDepartmentstore {
 	Bag(){
-		price = (int)(Math.random() * 6 +5);
+		price = (int)(Math.random() * 6 ) +5;
 	}
 }
 class Shoes extends JavaDepartmentstore {
 	Shoes(){
-		price = (int)(Math.random() * 6 +5);
+		price = (int)(Math.random() * 6 ) +5;
 	}
 }
 class Clock extends JavaDepartmentstore {
 	Clock(){
-		price = (int)(Math.random() * 6 +5);
+		price = (int)(Math.random() * 6 ) +5;
 	}
 }
 class Yoshida {
@@ -64,9 +64,9 @@ public class Quiz extends HttpServlet {
 		System.out.println("가방의 가격:"+b.price);
 		System.out.println("신발의 가격:"+s.price);
 		System.out.println("시계의 가격:"+c.price);
-		y.sell(b);//JavaDepartmentstore b = new Bag();
+		y.sell(b);//JavaDepartmentstore s = new Bag();
 		y.sell(s);//JavaDepartmentstore s = new Shoes();
-		y.sell(c);//JavaDepartmentstore c - new Clock();
+		y.sell(c);//JavaDepartmentstore s - new Clock();
 		System.out.println("총 판매 가격:"+y.total);
 //		y.sellAll(b, s, c);
 //		System.out.println("총 판매 가격:"+y.total);
