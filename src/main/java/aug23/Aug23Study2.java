@@ -23,16 +23,28 @@ class Eagle implements Birdd {
 	public void fly() {
 		System.out.println("천천히 멋있게 난다.");
 	}
-	
 }
 interface Horse {
 	void run();//말의 뛰어다니는 메서드(추상메서드)
 }//말의 특징을 갖는 객체
 
+class Pegasus implements Horse, Birdd {
+	@Override
+	public void fly() {
+		System.out.println("날개로 난다.");
+	}
+	@Override
+	public void run() {
+		System.out.println("네 발로 뛴다.");
+	}
+}
+
 @WebServlet("/Aug23Study2")
 public class Aug23Study2 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+			Pegasus p = new Pegasus();
+			p.fly();
+			p.run();
 	}
 	private static final long serialVersionUID = 1L;
        
